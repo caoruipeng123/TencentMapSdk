@@ -6,26 +6,25 @@ using System.Text;
 namespace TencentMapSdk.Entity
 {
     /// <summary>
-    /// Ip地址定位
+    /// Ip定位信息
     /// </summary>
-    public class IpLocationResponse
+    public class IpLocationResult
     {
-        /// <summary>
-        /// 状态码，0为正常,
-        /// 310 请求参数信息有误，
-        /// 311 Key格式错误,
-        /// 306 请求有护持信息请检查字符串,
-        /// 110 请求来源未被授权
-        /// </summary>
-        public int status { get; set; }
-        /// <summary>
-        /// 对status的描述
-        /// </summary>
-        public string message { get; set; }
         /// <summary>
         /// 用于定位的IP地址
         /// </summary>
-        public IpLocationResult result { get; set; }
+        [JsonProperty("ip")]
+        public string IP { get; set; }
+        /// <summary>
+        /// 定位坐标
+        /// </summary>
+        [JsonProperty("location")]
+        public Location Location { get; set; }
+        /// <summary>
+        /// 定位行政区划信息
+        /// </summary>
+        [JsonProperty("ad_info")]
+        public AdInfo AdInfo { get; set; }
     }
     /// <summary>
     /// 定位坐标
@@ -74,28 +73,5 @@ namespace TencentMapSdk.Entity
         [JsonProperty("adcode")]
         public int AdCode { get; set; }
     }
-    /// <summary>
-    /// 
-    /// </summary>
-    public class IpLocationResult
-    {
-        /// <summary>
-        /// 用于定位的IP地址
-        /// </summary>
-        [JsonProperty("ip")]
-        public string IP { get; set; }
-        /// <summary>
-        /// 定位坐标
-        /// </summary>
-        [JsonProperty("location")]
-        public Location Location { get; set; }
-        /// <summary>
-        /// 定位行政区划信息
-        /// </summary>
-        [JsonProperty("ad_info")]
-        public AdInfo AdInfo { get; set; }
-    }
-
-
 
 }

@@ -6,7 +6,7 @@ using System.Text;
 namespace TencentMapSdk
 {
     /// <summary>
-    /// 
+    /// 腾讯地图全局响应类
     /// </summary>
     public class MapResponse<T>
     {
