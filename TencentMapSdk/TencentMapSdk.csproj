@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>山西康维思辰科技有限公司</Authors>
+    <Company>山西康维思辰科技有限公司</Company>
+    <Product>腾讯地图.net sdk</Product>
+    <Description>腾讯地图.net sdk说明文档</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReleaseNotes>腾讯地图.net sdk发行说明</PackageReleaseNotes>
+    <PackageTags>标记</PackageTags>
+    <PackageProjectUrl>https://www.aeekwsc.com</PackageProjectUrl>
+    <PackageIcon>216 x 216.png</PackageIcon>
+    <RepositoryUrl>https://www.aeekwsc.com/gitlab</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <Copyright>版权</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Api\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\公司\AppLogo\216 x 216.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
