@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>TencentMapSdk</id>
+    <version>1.0.0</version>
+    <authors>山西康维思辰科技有限公司</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <icon>216 x 216.png</icon>
+    <description>腾讯地图.net sdk说明文档</description>
+    <releaseNotes>腾讯地图.net sdk发行说明</releaseNotes>
+    <copyright>版权</copyright>
+    <tags>TencentMapSdk标记</tags>
+    <repository type="github" url="https://github.com/caoruipeng123/TencentMapSdk" />
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

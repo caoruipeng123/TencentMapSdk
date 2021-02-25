@@ -20,6 +20,7 @@ namespace TencentMapSdk
         /// <returns></returns>
         public static bool IsDecimal(this string str)
         {
+            string a = "";
             return decimal.TryParse(str, out decimal returnValue);
         }
         /// <summary>

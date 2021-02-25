@@ -26,6 +26,9 @@ namespace TencentMapSdk
             return Get<MapResponse<IpLocationResult>>(url);
         }
     }
+    /// <summary>
+    /// Api请求基类
+    /// </summary>
     public class BaseApi
     {
         /// <summary>

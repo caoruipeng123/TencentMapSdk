@@ -1,0 +1,420 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentMapSdk</name>
+    </assembly>
+    <members>
+        <member name="T:TencentMapSdk.Entity.IpLocationResult">
+            <summary>
+            Ip定位信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.IpLocationResult.IP">
+            <summary>
+            用于定位的IP地址
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.IpLocationResult.Location">
+            <summary>
+            定位坐标
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.IpLocationResult.AdInfo">
+            <summary>
+            定位行政区划信息
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.Location">
+            <summary>
+            定位坐标
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Location.Lat">
+            <summary>
+            纬度
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Location.Lng">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.AdInfo">
+            <summary>
+            定位行政区划信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AdInfo.Nation">
+            <summary>
+            国家
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AdInfo.Province">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AdInfo.City">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AdInfo.District">
+            <summary>
+            小店区
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AdInfo.AdCode">
+            <summary>
+            行政区划代码
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Extensions">
+            <summary>
+            系统类的扩展
+            </summary>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsDecimal(System.String)">
+            <summary>
+            判断字符串是否能转换为Decimal类型。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsDecimal(System.String,System.Decimal@)">
+            <summary>
+            判断字符串是否能转换为Decimal类型。
+            </summary>
+            <param name="str"></param>
+            <param name="returnValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToDecimal(System.String)">
+            <summary>
+            字符串转换为Decimal类型
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToDecimal(System.String,System.Int32)">
+            <summary>
+            字符串转换为Decimal类型并四舍五入保留指定位数的小数
+            </summary>
+            <param name="str">被转换的字符串</param>
+            <param name="decimals">保留的小数位数，默认值为2</param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsDouble(System.String)">
+            <summary>
+            判断字符串能否成功转换为Double类型。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsDouble(System.String,System.Double@)">
+            <summary>
+            判断字符串能否成功转换为Double类型。
+            </summary>
+            <param name="str"></param>
+            <param name="returnValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToDouble(System.String)">
+            <summary>
+            字符串转换为double类型
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsInt(System.String)">
+            <summary>
+            判断字符串能否转换为int类型。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsInt(System.String,System.Int32@)">
+            <summary>
+            判断字符串能否成功转换为Int32类型。
+            </summary>
+            <param name="str"></param>
+            <param name="returnValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToInt(System.String)">
+            <summary>
+            字符串转换为int32类型
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToInt(System.String,System.Int32)">
+            <summary>
+            字符串转换为int类型。如果转换失败，返回指定的默认值
+            </summary>
+            <param name="str"></param>
+            <param name="defaultValue">转换失败时返回的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToIntOrNull(System.String)">
+            <summary>
+            字符串转换为int类型或者null
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToShort(System.String)">
+            <summary>
+            字符串转换为Short类型(Int16类型)
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToLong(System.String)">
+            <summary>
+            字符串转换为Long类型(int64)
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.RemoveSpace(System.String)">
+            <summary>
+            去除字符串中所有空格，包括\r和\n。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsLong(System.String)">
+            <summary>
+            判断字符串能否转换为Long类型。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsLong(System.String,System.Int64@)">
+            <summary>
+            判断字符串能够转换为Long类型。
+            </summary>
+            <param name="str"></param>
+            <param name="returnValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsDateTime(System.String)">
+            <summary>
+            判断字符串能够转换为DateTime类型。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsDateTime(System.String,System.DateTime@)">
+            <summary>
+            判断字符串能够转换为DateTime类型。
+            </summary>
+            <param name="str"></param>
+            <param name="returnValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToDateTime(System.String)">
+            <summary>
+            字符串转换为DateTime类型
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToDateTime(System.String,System.DateTime)">
+            <summary>
+            字符串转换为DateTime类型。如果转换失败，返回指定的默认值
+            </summary>
+            <param name="str"></param>
+            <param name="defaultValue">转换失败时返回的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToDateTimeOrNull(System.String,System.String)">
+            <summary>
+            字符串转换为DateTime类型，如果转换失败，返回null 
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsGuid(System.String)">
+            <summary>
+            判断字符串能够转换为Guid类型。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsGuid(System.String,System.Guid@)">
+             <summary>
+            判断字符串能够转为Guid类型。
+             </summary>
+             <param name="str"></param>
+             <param name="returnValue"></param>
+             <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToGuid(System.String)">
+            <summary>
+            字符串转换为Guid类型，如果转换失败，返回
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsUrl(System.String)">
+            <summary>
+            判断一个字符串是否为url格式
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsEmail(System.String)">
+            <summary>
+            判断一个字符串是否为Email格式
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToBoolean(System.String)">
+            <summary>
+            字符串转换为bool类型
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsNullOrEmpty(System.String)">
+            <summary>
+            判断字符串是否为空。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsNullOrEmpty(System.String,System.Action)">
+            <summary>
+            判断字符串是否为空。为空时返回ture并执行指定的委托
+            </summary>
+            <param name="str"></param>
+            <param name="action">字符串为空时，执行的委托</param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.EnsureNotNullOrEmpty(System.String,System.String)">
+            <summary>
+            确认字符串不为空
+            </summary>
+            <param name="str"></param>
+            <param name="newStr"></param>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsNotNullOrEmpty(System.String)">
+            <summary>
+            判断字符串是否不为空
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.IsNotNullOrEmpty(System.String,System.Action)">
+            <summary>
+            断字符串是否不为空。不为空时返回true并执行指定委托
+            </summary>
+            <param name="str"></param>
+            <param name="action">对象不为空时，指定的委托</param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.Left(System.String,System.Int32)">
+            <summary>
+            截取左边多少个(length)字符。length小于1时，返回空字符串""。length大于被截取的字符串长度时，返回源字符串
+            </summary>
+            <param name="str"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.Right(System.String,System.Int32)">
+            <summary>
+            获取右边多少个字符。length小于1时，返回空字符串""。length大于被截取的字符串长度时，返回源字符串
+            </summary>
+            <param name="str"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ContainPunctuation(System.String)">
+            <summary>
+            字符串是否包含标点符号(不包括_下画线)。当字符串中包含_时，返回false
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.RemovePunctuationOrEmpty(System.String)">
+            <summary>
+            去除字符串中的标点符号和空字符   
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.Encode(System.String,System.Text.Encoding)">
+            <summary>
+            将字符串中的所有字符编码为一个字节序列
+            </summary>
+            <param name="str"></param>
+            <param name="encoding">编码方式：默认使用Encoding.UTF8</param>
+            该方法和<see cref="!:Decode(System.Collections.Generic.IEnumerable&lt;byte&gt;, Encoding)"/>相反
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.In(System.String,System.String[])">
+            <summary>
+            判断字符串是否在指定的字符串集合中
+            </summary>
+            <param name="str"></param>
+            <param name="array"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.Extensions.ToEnumOrNull``1(System.String)">
+            <summary>
+            将字符串转换为null或者枚举类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TencentMapSdk.MapResponse`1">
+            <summary>
+            腾讯地图全局响应类
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.MapResponse`1.Status">
+            <summary>
+            状态码，0为正常,
+            310 请求参数信息有误，
+            311 Key格式错误,
+            306 请求有护持信息请检查字符串,
+            110 请求来源未被授权
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.MapResponse`1.Message">
+            <summary>
+            对status的描述
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.MapResponse`1.Result">
+            <summary>
+            用于定位的IP地址
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.TencentMapApi">
+            <summary>
+            腾讯地图Api
+            </summary>
+        </member>
+        <member name="M:TencentMapSdk.TencentMapApi.IpLocation(System.String,System.String)">
+            <summary>
+            通过终端设备IP地址获取其当前所在地理位置，精确到市级，常用于显示当地城市天气预报、初始化用户城市等非精确定位场景。
+            </summary>
+            <param name="key">开发密钥（Key）</param>
+            <param name="ip">IP地址，缺省时会使用请求端的IP</param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.BaseApi.Get``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="Response"></typeparam>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
