@@ -9,9 +9,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReleaseNotes>腾讯地图.net sdk发行说明</PackageReleaseNotes>
     <PackageTags>标记</PackageTags>
-    <PackageProjectUrl>https://www.aeekwsc.com</PackageProjectUrl>
+    <PackageProjectUrl></PackageProjectUrl>
     <PackageIcon>216 x 216.png</PackageIcon>
-    <RepositoryUrl>https://www.aeekwsc.com/gitlab</RepositoryUrl>
+    <RepositoryUrl>https://github.com/caoruipeng123/TencentMapSdk</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
     <Copyright>版权</Copyright>
   </PropertyGroup>
