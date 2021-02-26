@@ -7,7 +7,7 @@
     <Product>腾讯地图.net sdk</Product>
     <Description>腾讯地图.net sdk说明文档</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>腾讯地图.net sdk发行说明</PackageReleaseNotes>
+    <PackageReleaseNotes>腾讯地图.net sdk发行说明。有任何问题您可以联系坐着的QQ:1014408159</PackageReleaseNotes>
     <PackageTags>腾讯地图;腾讯地图sdk;TencentMapSdk;caoruipeng</PackageTags>
     <PackageProjectUrl></PackageProjectUrl>
     <PackageIcon>216 x 216.png</PackageIcon>
