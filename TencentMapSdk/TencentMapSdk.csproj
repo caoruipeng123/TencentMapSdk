@@ -16,6 +16,7 @@
     <Copyright>山西康维思辰科技有限公司</Copyright>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

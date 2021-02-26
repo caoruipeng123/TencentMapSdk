@@ -29,5 +29,21 @@ namespace TencentMapSdk
         /// </summary>
         [JsonProperty("result")]
         public T Result { get; set; }
+        /// <summary>
+        /// 腾讯地图接口返回的原始报文
+        /// </summary>
+        //public string Body { get; set; }
+    }
+    /// <summary>
+    /// 逆地址解析
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class MapLocationToAddressResponse<T> : MapResponse<T>
+    {
+        /// <summary>
+        /// 本次请求的唯一标识
+        /// </summary>
+        [JsonProperty("request_id")]
+        public string RequestID { get; set; }
     }
 }

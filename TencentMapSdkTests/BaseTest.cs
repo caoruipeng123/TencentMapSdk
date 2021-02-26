@@ -6,6 +6,8 @@ namespace TencentMapSdkTests
 {
     public class BaseTest
     {
-        public static string key = "OMSBZ-O5NWS-5GIOZ-6KHD3-PNKD7-42BGF";//应用Key
+        public static string key = "SNUBZ-RV6CF-WILJU-JWOTQ-SFF3O-3VFJA";//应用Key
+        public static string secretKey = "8xZ3Td9hhMhtOl7HhcItpqVfJ4vufboA";//Secret key
+
     }
 }

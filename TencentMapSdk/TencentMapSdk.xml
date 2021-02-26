@@ -4,6 +4,82 @@
         <name>TencentMapSdk</name>
     </assembly>
     <members>
+        <member name="T:TencentMapSdk.Entity.AddressToLocationResponse">
+            <summary>
+            地址解析
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationResponse.Title">
+            <summary>
+            解析到坐标所用到的关键地址、地点
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationResponse.Location">
+            <summary>
+            解析到的坐标（GCJ02坐标系）
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationResponse.AddressComponent">
+            <summary>
+            解析后的地址部件
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationResponse.AdInfo">
+            <summary>
+            行政区划信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationResponse.Similarity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationResponse.Deviation">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentMapSdk.Entity.AddressToLocationResponse.Reliability" -->
+        <member name="P:TencentMapSdk.Entity.AddressToLocationResponse.Level">
+            <summary>
+            解析精度级别，分为11个级别，一般>=9即可采用（定位到点，精度较高） 也可根据实际业务需求自行调整，完整取值表见下文。
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationAddressComponent.Province">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationAddressComponent.City">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationAddressComponent.District">
+            <summary>
+            海淀区
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationAddressComponent.Street">
+            <summary>
+            北四环西路
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationAddressComponent.StreetNumber">
+            <summary>
+            北四环西路66号
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.AddressToLocationAdInfo">
+            <summary>
+            行政区划信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressToLocationAdInfo.AdCode">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:TencentMapSdk.Entity.IpLocationResult">
             <summary>
             Ip定位信息
@@ -67,6 +143,326 @@
         <member name="P:TencentMapSdk.Entity.AdInfo.AdCode">
             <summary>
             行政区划代码
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.LocationToAddressResponse">
+            <summary>
+            逆地址解析
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationToAddressResponse.Address">
+            <summary>
+            以行政区划+道路+门牌号等信息组成的标准格式化地址
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationToAddressResponse.FormattedAddresses">
+            <summary>
+            结合知名地点形成的描述性地址，更具人性化特点
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationToAddressResponse.AddressComponent">
+            <summary>
+            地址部件，address不满足需求时可自行拼接
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationToAddressResponse.AdInfo">
+            <summary>
+            行政区划信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationToAddressResponse.AddressReference">
+            <summary>
+            	坐标相对位置参考
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationToAddressResponse.PoiCount">
+            <summary>
+            查询的周边poi的总数，仅在传入参数get_poi=1时返回
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationToAddressResponse.Pois">
+            <summary>
+            周边地点（POI）数组，数组中每个子项为一个POI对象
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.FormattedAddresses">
+            <summary>
+            结合知名地点形成的描述性地址，更具人性化特点
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.FormattedAddresses.Recommend">
+            <summary>
+            推荐使用的地址描述，描述精确性较高 海淀区中关村中国技术交易大厦(彩和坊路)
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.FormattedAddresses.Rough">
+            <summary>
+            粗略位置描述 海淀区中关村中国技术交易大厦(彩和坊路)
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.AddressComponent">
+            <summary>
+            地址部件，address不满足需求时可自行拼接
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressComponent.Nation">
+            <summary>
+            中国
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressComponent.Province">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressComponent.City">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressComponent.District">
+            <summary>
+            海淀区
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressComponent.Street">
+            <summary>
+            北四环西路
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressComponent.StreetNumber">
+            <summary>
+            北四环西路66号
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.QueryAdInfo">
+            <summary>
+            行政区划信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.QueryAdInfo.NationCode">
+            <summary>
+            国家代码（ISO3166标准3位数字码）
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.QueryAdInfo.AdCode">
+            <summary>
+            行政区划代码
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.QueryAdInfo.CityCode">
+            <summary>
+            城市代码，由国家码+行政区划代码（提出城市级别）组合而来，总共为9位
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.QueryAdInfo.Name">
+            <summary>
+            中国,北京市,北京市,海淀区
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.QueryAdInfo.Location">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.QueryAdInfo.Nation">
+            <summary>
+            中国
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.QueryAdInfo.Province">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.QueryAdInfo.City">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.QueryAdInfo.District">
+            <summary>
+            海淀区
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.FamousArea">
+            <summary>
+            知名区域，如商圈或人们普遍认为有较高知名度的区域
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.FamousArea.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.FamousArea.Title">
+            <summary>
+            中关村
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.FamousArea.Location">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.FamousArea.Distance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.FamousArea.DirDesc">
+            <summary>
+            内
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.Town">
+            <summary>
+            乡镇街道
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Town.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Town.Title">
+            <summary>
+            海淀街道
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Town.Location">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Town.Distance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Town.DirDesc">
+            <summary>
+            内
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.AddressReference">
+            <summary>
+            坐标相对位置参考
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressReference.FamousArea">
+            <summary>
+            知名区域，如商圈或人们普遍认为有较高知名度的区域
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressReference.BusinessArea">
+            <summary>
+            商圈，目前与famous_area一致
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressReference.Town">
+            <summary>
+            乡镇街道
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressReference.Landmarkl1">
+            <summary>
+            一级地标，可识别性较强、规模较大的地点、小区等
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressReference.Landmarkl2">
+            <summary>
+            二级地标，较一级地标更为精确，规模更小
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressReference.Street">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressReference.StreetNumber">
+            <summary>
+            门牌
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressReference.Crossroad">
+            <summary>
+            交叉路口 
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.AddressReference.Water">
+            <summary>
+            水系
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.ItemAdInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.ItemAdInfo.AdCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.ItemAdInfo.Province">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.ItemAdInfo.City">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.ItemAdInfo.District">
+            <summary>
+            海淀区
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.PoisItem">
+            <summary>
+            	周边地点（POI）数组，数组中每个子项为一个POI对象
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.PoisItem.ID">
+            <summary>
+            地点（POI）唯一标识
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.PoisItem.title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.PoisItem.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.PoisItem.Category">
+            <summary>
+            地点分类信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.PoisItem.Location">
+            <summary>
+            提示所述位置坐标
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.PoisItem.AdInfo">
+            <summary>
+            行政区划信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.PoisItem.Distance">
+            <summary>
+            该POI到逆地址解析传入的坐标的直线距离
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.PoisItem.DirDesc">
+            <summary>
+            内
             </summary>
         </member>
         <member name="T:TencentMapSdk.Extensions">
@@ -395,18 +791,46 @@
             用于定位的IP地址
             </summary>
         </member>
+        <member name="T:TencentMapSdk.MapLocationToAddressResponse`1">
+            <summary>
+            逆地址解析
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:TencentMapSdk.MapLocationToAddressResponse`1.RequestID">
+            <summary>
+            本次请求的唯一标识
+            </summary>
+        </member>
         <member name="T:TencentMapSdk.TencentMapApi">
             <summary>
             腾讯地图Api
             </summary>
         </member>
-        <member name="M:TencentMapSdk.TencentMapApi.IpLocation(System.String,System.String)">
+        <member name="M:TencentMapSdk.TencentMapApi.IpLocation(System.String,System.String,System.String)">
             <summary>
-            通过终端设备IP地址获取其当前所在地理位置，精确到市级，常用于显示当地城市天气预报、初始化用户城市等非精确定位场景。
+            IP定位：通过终端设备IP地址获取其当前所在地理位置，精确到市级，常用于显示当地城市天气预报、初始化用户城市等非精确定位场景。
             </summary>
             <param name="key">开发密钥（Key）</param>
             <param name="ip">IP地址，缺省时会使用请求端的IP</param>
+            <param name="secretKey"></param>
             <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TencentMapSdk.TencentMapApi.LocationToAddress(System.String,System.Int32,System.String,System.String,System.String)" -->
+        <member name="M:TencentMapSdk.TencentMapApi.AddressToLocation(System.String,System.String,System.String,System.String)">
+            <summary>
+            地址解析
+            </summary>
+            <param name="address">地址（注：地址中请包含城市名称，否则会影响解析效果） address=北京市海淀区彩和坊路海淀西大街74号</param>
+            <param name="region">地址所在城市（若地址中包含城市名称侧可不传） 	region=北京</param>
+            <param name="key">开发密钥（Key）</param>
+            <param name="secretKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TencentMapSdk.BaseApi">
+            <summary>
+            Api请求基类
+            </summary>
         </member>
         <member name="M:TencentMapSdk.BaseApi.Get``1(System.String)">
             <summary>
@@ -414,6 +838,44 @@
             </summary>
             <typeparam name="Response"></typeparam>
             <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TencentMapSdk.SignBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TencentMapSdk.SignBuilder.Create(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.SignBuilder.Build">
+            <summary>
+            创建签名字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.SignBuilder.WithKeyValue(System.String,System.String)">
+            <summary>
+            设置KeyValue
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TencentMapSdk.Util">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TencentMapSdk.Util.MD5(System.String,System.String)">
+            <summary>
+            获取md5加密字符串
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <param name="salt">在尾部添加随机字符串</param>
             <returns></returns>
         </member>
     </members>
