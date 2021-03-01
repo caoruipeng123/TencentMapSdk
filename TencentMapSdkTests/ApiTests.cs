@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using TencentMapSdk;
 using TencentMapSdk.Entity;
@@ -47,12 +48,74 @@ namespace TencentMapSdkTests
             Assert.IsNotNull(response);
         }
         /// <summary>
+        /// 行政区域测试
+        /// </summary>
+        [TestMethod]
+        public void AreaTest()
+        {
+            AreaResponse<List<List<Area>>> response = TencentMapApi.GetAreas(key, secretKey);
+            Assert.IsNotNull(response);
+        }
+        /// <summary>
+        /// 获取子级行政区域
+        /// </summary>
+        [TestMethod]
+        public void SonAreaTest()
+        {
+            AreaResponse<List<List<Area>>> response = TencentMapApi.GetSonAreas("110000", 2, "3000", key, secretKey);
+            Assert.IsNotNull(response);
+        }
+        /// <summary>
+        /// 搜索区域
+        /// </summary>
+        [TestMethod]
+        public void SearchAreaTest()
+        {
+            AreaResponse<List<List<Area>>> response = TencentMapApi.SearchAreas("山西", 0, "", key, secretKey);
+            Assert.IsNotNull(response);
+        }
+        /// <summary>
+        /// 实现从其它地图供应商坐标系或标准GPS坐标系，批量转换到腾讯地图坐标系。
+        /// </summary>
+        [TestMethod]
+        public void LocationTranslateTest()
+        {
+            LocationTranslateResponse response = TencentMapApi.LocationTranslate("37.7360500000,112.5656600000", 1,  key, secretKey);
+            Assert.IsNotNull(response);
+        }
+        /// <summary>
+        /// 矩阵距离
+        /// </summary>
+        [TestMethod]
+        public void DistanceTest()
+        {
+            var response = TencentMapApi.DistanceMatrix("driving", "37.7360500000,112.5656600000", "37.7360500000,117.5656600000", key, secretKey);
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response.Status == 0);
+        }
+        /// <summary>
+        /// 搜索
+        /// </summary>
+        [TestMethod]
+        public void SearchTest()
+        {
+            var response = TencentMapApi.Search("大学", "region(太原,0)", "category=大学,中学", "_distance", 10, 1, key, secretKey);
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response.Status == 0);
+            response= TencentMapApi.Search("大学", "nearby(37.7360500000,112.5656600000,1000)", "category=大学,中学", "_distance", 10, 1, key, secretKey);
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response.Status == 0);
+            response = TencentMapApi.Search("大学", "rectangle(39.907293,116.368935,39.914996,116.379321)", "category=大学,中学", "_distance", 10, 1, key, secretKey);
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response.Status == 0);
+        }
+        /// <summary>
         /// 测试JsponProperty属性和属性名是否正确
         /// </summary>
         [TestMethod]
         public void NameTest()
         {
-            var propertyes = typeof(AddressToLocationResponse).GetProperties();
+            var propertyes = typeof(SearchResponse).GetProperties();
             foreach (PropertyInfo p in propertyes)
             {
                 CheckProperty(p);

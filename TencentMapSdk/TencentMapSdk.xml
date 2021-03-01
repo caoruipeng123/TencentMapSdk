@@ -80,6 +80,92 @@
             
             </summary>
         </member>
+        <member name="T:TencentMapSdk.Entity.Area">
+            <summary>
+            行政区划代码（adcode）规则说明
+            代码共6位，前两位代表省（一级）、中间两位为市/地区（二级），最后两位为区县（三级）
+            1）省级：前两位有值，后4位置0，如，河北省：130000
+            2）市/地区：前4四位有值，包含省代码与市代码，最后两位置0，如河北省保定市：130600
+            3）区县：6位全有值，包含前4位省市代码及区县代码，河北省保定市涿州市：130681
+            4）直辖市、香港、澳门：
+                 同省级，在行政区划接口（ws/district/v1/list）中，其下直接为区级（没有二级结构填充）
+                例：北京,东城区 （而非：“北京,北京,东城区”）
+            5）直辖县：第3、4位为90的，为省直辖县
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Area.ID">
+            <summary>
+            行政区划唯一标识（adcode）
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Area.Name">
+            <summary>
+            简称，如“内蒙古”
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Area.FullName">
+            <summary>
+            简称，如“内蒙古”
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Area.Location">
+            <summary>
+            简称，如“内蒙古”
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Area.PinYin">
+            <summary>
+            行政区划拼音，每一下标为一个字的全拼
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Area.Cidx">
+            <summary>
+            子级行政区划在下级数组中的下标位置
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.DistanceMatrixResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.DistanceMatrixResponse.Rows">
+            <summary>
+            多点到多点距离计算，结果为二维数组，rows为行，elements为列 结果数组（行）
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.DistanceMatrixRow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.DistanceMatrixRow.Elements">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.DistanceMatrixLocation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.DistanceMatrixLocation.Distance">
+            <summary>
+            起点到终点的距离，单位：米
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.DistanceMatrixLocation.Duration">
+            <summary>
+            表示从起点到终点的结合路况的时间，秒为单位
+            注：步行/骑行方式（不计算耗时）以及起终点附近没有道路造成无法计算时，不返回本此节点
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.DistanceMatrixLocation.Status">
+            <summary>
+            本对起终点计算的状态码，取值：
+            4 代表附近没有路，距离计算失败，此时distance为直线距离，预估耗时（duraction）会返回 0。
+            计算结果正常返回时，不返回status
+            </summary>
+        </member>
         <member name="T:TencentMapSdk.Entity.IpLocationResult">
             <summary>
             Ip定位信息
@@ -465,6 +551,144 @@
             内
             </summary>
         </member>
+        <member name="T:TencentMapSdk.Entity.LocationTranslateResponse">
+            <summary>
+            坐标转换
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationTranslateResponse.Status">
+            <summary>
+            状态码，0为正常,
+            310 请求参数信息有误，
+            311 Key格式错误,
+            306 请求有护持信息请检查字符串,
+            110 请求来源未被授权
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationTranslateResponse.Message">
+            <summary>
+            对status的描述
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.LocationTranslateResponse.Locations">
+            <summary>
+            坐标转换结果，转换后的坐标顺序与输入顺序一致
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.SearchResponse">
+            <summary>
+            地点搜索信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchResponse.Status">
+            <summary>
+            状态码，0为正常,
+            310 请求参数信息有误，
+            311 Key格式错误,
+            306 请求有护持信息请检查字符串,
+            110 请求来源未被授权
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchResponse.Message">
+            <summary>
+            对status的描述
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchResponse.Count">
+            <summary>
+            本次搜索结果总数，另外本服务限制最多返回200条数据(data)，翻页（page_index）超过搜索结果总数 或 最大200条限制时，将返回最后一页数据。
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchResponse.RequestID">
+            <summary>
+            本次请求唯一ID
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchResponse.Data">
+            <summary>
+            搜索结果POI数组，每项为一个POI对象
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchResponse.Region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TencentMapSdk.Entity.SearchAdInfo">
+            <summary>
+            行政区域信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchAdInfo.AdCode">
+            <summary>
+            行政区划代码
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchAdInfo.Province">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchAdInfo.City">
+            <summary>
+            北京市
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchAdInfo.District">
+            <summary>
+            西城区
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchDataItem.ID">
+            <summary>
+            POI唯一标识
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchDataItem.Title">
+            <summary>
+            POI名称 海底捞火锅(西单店)
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchDataItem.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchDataItem.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchDataItem.Category">
+            <summary>
+            POI分类 美食:火锅
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchDataItem.Type">
+            <summary>
+            POI类型，值说明：0:普通POI / 1:公交车站 / 2:地铁站 / 3:公交线路 / 4:行政区划
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchDataItem.Location">
+            <summary>
+            坐标
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchDataItem.Distance">
+            <summary>
+            距离，单位： 米，在周边搜索、城市范围搜索传入定位点时返回
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.SearchDataItem.AdInfo">
+            <summary>
+            行政区划信息
+            </summary>
+        </member>
+        <member name="P:TencentMapSdk.Entity.Region.Title">
+            <summary>
+            北京市
+            </summary>
+        </member>
         <member name="T:TencentMapSdk.Extensions">
             <summary>
             系统类的扩展
@@ -802,6 +1026,17 @@
             本次请求的唯一标识
             </summary>
         </member>
+        <member name="T:TencentMapSdk.AreaResponse`1">
+            <summary>
+            行政区域
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:TencentMapSdk.AreaResponse`1.DataVersion">
+            <summary>
+            行政区划数据版本，便于您判断更新
+            </summary>
+        </member>
         <member name="T:TencentMapSdk.TencentMapApi">
             <summary>
             腾讯地图Api
@@ -824,6 +1059,85 @@
             <param name="address">地址（注：地址中请包含城市名称，否则会影响解析效果） address=北京市海淀区彩和坊路海淀西大街74号</param>
             <param name="region">地址所在城市（若地址中包含城市名称侧可不传） 	region=北京</param>
             <param name="key">开发密钥（Key）</param>
+            <param name="secretKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.TencentMapApi.GetAreas(System.String,System.String)">
+            <summary>
+            获取所有省市区列表
+            </summary>
+            <param name="key"></param>
+            <param name="secretKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.TencentMapApi.GetSonAreas(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            获取下级行政区划
+            </summary>
+            <param name="id">父级行政区划ID（adcode），缺省时返回一级行政区划，也就是省级</param>
+            <param name="get_polygon">返回行政区划轮廓点串（经纬度点串），0 默认，不返回轮廓1 包含海域，3公里抽稀粒度 2 纯陆地行政区划，可通过max_offset设置返回轮廓的抽稀级别</param>
+            <param name="max_offset">轮廓点串的抽稀精度（仅对get_polygon=2时支持），单位米，可选值：100 ：100米（当缺省id返回省级区划时，将按500米返回，其它级别正常生效） 500 ：500米 1000：1000米 3000：3000米</param>
+            <param name="key"></param>
+            <param name="secretKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.TencentMapApi.SearchAreas(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            获取下级行政区划
+            </summary>
+            <param name="keyword">搜索关键词：1.支持输入一个文本关键词2.支持多个行政区划代码(adcode)，英文逗号分隔</param>
+            <param name="get_polygon">返回行政区划轮廓点串（经纬度点串），0 默认，不返回轮廓1 包含海域，3公里抽稀粒度 2 纯陆地行政区划，可通过max_offset设置返回轮廓的抽稀级别</param>
+            <param name="max_offset">轮廓点串的抽稀精度（仅对get_polygon=2时支持），单位米，可选值：100 ：100米（当缺省id返回省级区划时，将按500米返回，其它级别正常生效） 500 ：500米 1000：1000米 3000：3000米</param>
+            <param name="key"></param>
+            <param name="secretKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.TencentMapApi.LocationTranslate(System.String,System.Int32,System.String,System.String)">
+            <summary>
+              实现从其它地图供应商坐标系或标准GPS坐标系，批量转换到腾讯地图坐标系。
+            </summary>
+            <param name="locations">
+            预转换的坐标，支持批量转换，
+            格式：纬度前，经度后，纬度和经度之间用",“分隔，每组坐标之间使用”;"分隔；
+            批量支持坐标个数以HTTP GET方法请求上限为准
+            locations=39.12,116.83;30.21,115.43
+            </param>
+            <param name="type">
+            输入的locations的坐标类型
+            可选值为[1, 6] 之间的整数，每个数字代表的类型说明：
+            1 GPS坐标
+            2 sogou经纬度
+            3 baidu经纬度
+            4 mapbar经纬度
+            5 [默认] 腾讯、google、高德坐标
+            6 sogou墨卡托
+            </param>
+            <param name="key"></param>
+            <param name="secretKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.TencentMapApi.DistanceMatrix(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             距离矩阵（DistanceMatrix），用于批量计算一组起终点的路面距离（或称导航距离），可应用于网约车派单、多目的地最优路径智能计算等场景中，支持驾车、步行、骑行多种交通方式，满足不同应用需要。
+            </summary>
+            <param name="mode">计算方式，取值：driving：驾车 walking：步行 bicycling：自行车</param>
+            <param name="from">起点坐标 格式： lat,lng[, heading];lat,lng[, heading] from=39.071510,117.190091  from=39.071510,117.190091,270;39.108951,117.279396,180</param>
+            <param name="to">终点坐标 格式： lat,lng;lat,lng…</param>
+            <param name="key"></param>
+            <param name="secretKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.TencentMapApi.Search(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="keyword"></param>
+            <param name="boundary"></param>
+            <param name="filter"></param>
+            <param name="orderby">排序，目前仅周边搜索（boundary=nearby）支持按距离由近到远排序，取值：_distance</param>
+            <param name="page_size"></param>
+            <param name="page_index"></param>
+            <param name="key"></param>
             <param name="secretKey"></param>
             <returns></returns>
         </member>
@@ -851,9 +1165,15 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:TencentMapSdk.SignBuilder.Build">
+        <member name="M:TencentMapSdk.SignBuilder.BuildSignStr">
             <summary>
             创建签名字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TencentMapSdk.SignBuilder.BuildQueryString(System.Boolean)">
+            <summary>
+            创建QueryString
             </summary>
             <returns></returns>
         </member>

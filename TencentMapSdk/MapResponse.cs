@@ -46,4 +46,17 @@ namespace TencentMapSdk
         [JsonProperty("request_id")]
         public string RequestID { get; set; }
     }
+    /// <summary>
+    /// 行政区域
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class AreaResponse<T> : MapResponse<T>
+    {
+        /// <summary>
+        /// 行政区划数据版本，便于您判断更新
+        /// </summary>
+        [JsonProperty("data_version")]
+        public decimal DataVersion { get; set; }
+    }
+
 }

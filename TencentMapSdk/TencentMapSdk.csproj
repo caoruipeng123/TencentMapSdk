@@ -5,9 +5,12 @@
     <Authors>曹瑞鹏</Authors>
     <Company>山西康维思辰科技有限公司</Company>
     <Product>腾讯地图.net sdk</Product>
-    <Description>腾讯地图.net sdk说明文档</Description>
+    <Description>腾讯地图.net sdk说明文档。在使用sdk开发过程中，有任何问题您可以联系作者的QQ:1014408159，或者添加QQ群：281768451</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>腾讯地图.net sdk发行说明。有任何问题您可以联系坐着的QQ:1014408159</PackageReleaseNotes>
+    <PackageReleaseNotes>1、新增行政区域区划接口。
+2、新增地址搜索接口。
+3、新增矩阵距离计算接口。
+</PackageReleaseNotes>
     <PackageTags>腾讯地图;腾讯地图sdk;TencentMapSdk;caoruipeng</PackageTags>
     <PackageProjectUrl></PackageProjectUrl>
     <PackageIcon>216 x 216.png</PackageIcon>
@@ -16,7 +19,7 @@
     <Copyright>山西康维思辰科技有限公司</Copyright>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Version>1.0.1</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -25,10 +28,6 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include=".nuget\" />
   </ItemGroup>
 
   <ItemGroup>
