@@ -9,7 +9,7 @@ namespace TencentMapSdkTests
     internal class Ensure
     {
         /// <summary>
-        /// 确保输入值不为空字符串。如果为空字符串(null、""、"  "、string.empty)，就抛异常。
+        /// 确保输入值不为空字符串。如果为空字符串(null、""、"  "、string.empty)，就抛异常。 
         /// </summary>
         /// <param name="paramName">参数名</param>
         /// <param name="input">输入值</param>
